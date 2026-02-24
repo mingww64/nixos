@@ -1,0 +1,72 @@
+{
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "explorer.confirmDelete": false,
+    "terminal.integrated.fontFamily": "monospace",
+    "security.workspace.trust.untrustedFiles": "open",
+    "git.ignoreRebaseWarning": true,
+    "cmake.configureOnOpen": true,
+    "diffEditor.renderSideBySide": false,
+    "workbench.colorCustomizations": {},
+    "editor.tokenColorCustomizations": {},
+    "grammarly.files.include": [
+        "**/*.md",
+        "**/*.txt"
+    ],
+    "update.mode": "none",
+    "githubPullRequests.createOnPublishBranch": "never",
+    "editor.codeActionsOnSave": {},
+    "extensions.verifySignature": false,
+    "remote.SSH.enableRemoteCommand": true,
+    "remote.SSH.showLoginTerminal": true,
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "workbench.editor.empty.hint": "hidden",
+    "editor.fontFamily": "'monospace', monospace",
+    "diffEditor.codeLens": true,
+    "geminicodeassist.project": "quadratic-webbing-9jkxm",
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "workbench.colorTheme": "Default Dark+",
+    "terminal.integrated.allowedLinkSchemes": [
+        "file",
+        "http",
+        "https",
+        "mailto",
+        "vscode",
+        "vscode-insiders",
+        "man"
+    ],
+    "chat.tools.terminal.autoApprove": {
+        "sed": true,
+        "nix-shell": true,
+        "mkdir": true,
+        "cp": true,
+        "nix": true,
+    },
+    "chat.edits2.enabled": true,
+    "chat.mcp.gallery.enabled": true,
+    "github.copilot.chat.tools.memory.enabled": true,
+    "github.copilot.chat.codesearch.enabled": true,
+    "github.copilot.chat.anthropic.thinking.enabled": true,
+    "[nix]": {
+        "editor.defaultFormatter": null
+    },
+    "nix.enableLanguageServer": true,
+    "nix.serverPath": "nixd",
+    "nix.serverSettings": {
+        "nixd": {
+            "formatting": {
+                "command": [
+                    "alejandra",
+                    "-q"
+                ]
+            },
+            "options": {
+                "nixos": {
+                    "expr": "(builtins.getFlake \"/etc/nixos\").nixosConfigurations.desktop.options"
+                }
+            }
+        }
+    },
+    "nix.formatterPath": "nixfmt"
+}

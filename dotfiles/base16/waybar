@@ -1,0 +1,24 @@
+/*
+*
+* Base16 oomox-wallpaper
+* Author: oomox-wallpaper
+*
+*/
+
+@define-color base00 #505050;
+@define-color base01 #505050;
+@define-color base02 #6c514f;
+@define-color base03 #a7a7a7;
+@define-color base04 #646464;
+@define-color base05 #ffffff;
+@define-color base06 #f9e9fe;
+@define-color base07 #ffffff;
+@define-color base08 #a07aad;
+@define-color base09 #9483a5;
+@define-color base0A #9483a5;
+@define-color base0B #5fb9a3;
+@define-color base0C #5fb9a3;
+@define-color base0D #a07aad;
+@define-color base0E #a07aad;
+@define-color base0F #866a95;
+

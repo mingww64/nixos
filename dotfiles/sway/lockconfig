@@ -1,0 +1,6 @@
+image=~/.config/sway/wallpaper.jpg
+effect-blur=50x50
+clock
+ring-color=cca9cb
+text-color=e199bc
+key-hl-color=ecd7fe

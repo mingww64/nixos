@@ -1,0 +1,26 @@
+# Base16 oomox-wallpaper - foot color config
+# oomox-wallpaper
+[colors]
+background=505050
+foreground=e4bfff
+
+# Normal colors
+regular0=505050 # Black, could also be base01
+regular1=c28289 # Red
+regular2=84ff63 # Green
+regular3=c2da61 # Yellow
+regular4=6482df # Blue
+regular5=9d82df # Magenta
+regular6=44ffb7 # Cyan
+regular7=e4bfff # White
+
+# Bright colors
+bright0=9a87a7
+bright1=b1be18
+bright2=42502f
+bright3=88a486
+bright4=646464
+bright5=b08dc8
+bright6=a58c3c
+bright7=ffffff
+

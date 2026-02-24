@@ -1,0 +1,33 @@
+{
+  "git.autofetch": true,
+  "workbench.editor.empty.hint": "hidden",
+  "editor.fontFamily": "'monospace', monospace",
+  "diffEditor.codeLens": true,
+  "geminicodeassist.project": "quadratic-webbing-9jkxm",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "workbench.colorTheme": "Default Dark+",
+  "nix.enableLanguageServer": true,
+  "nix.serverPath": "nixd",
+  "nix.serverSettings": {
+    "nixd": {
+      "formatting": {
+        "command": [
+          "alejandra",
+          "-q"
+        ]
+      },
+      "options": {
+        "nixos": {
+          "expr": "(builtins.getFlake \"/etc/nixos\").nixosConfigurations.desktop.options"
+        }
+      }
+    }
+  },
+  "nix.formatterPath": "nixfmt",
+  "php.suggest.basic": false,
+  "php.validate.enable": false,
+  "emmet.excludeLanguages": [
+    "markdown",
+    "php"
+  ]
+}

@@ -1,0 +1,23 @@
+## Base16 oomox-wallpaper
+# Author: oomox-wallpaper
+#
+# You can use these variables anywhere in the mako configuration file.
+
+background-color=#505050
+text-color=#ffffff
+border-color=#a07aad
+default-timeout=60000
+
+[urgency=low]
+background-color=#505050
+text-color=#9483a5
+border-color=#a07aad
+
+[urgency=high]
+background-color=#505050
+text-color=#a07aad
+border-color=#a07aad
+ignore-timeout=1
+
+height=500
+width=800

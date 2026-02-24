@@ -1,0 +1,109 @@
+{
+    "layer": "top",
+    "position": "top",
+    "modules-left": ["custom/media","tray", "sway/workspaces"],
+    "modules-center":["wlr/taskbar"],
+    "modules-right": ["sway/language", "network","custom/ping", "battery", "pulseaudio", "custom/weather", "clock", "custom/quit"],
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%a %b %d}",
+        "tooltip": false
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "bat":"BAT1",
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-discharging": " {capacity}%",
+        "format-alt": "{icon} {time}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        "format": "{ifname}",
+        "format-wifi": "  {essid}",
+        "format-ethernet": "󰈀 {ifname}",
+        "format-disconnected": "",
+        "tooltip-format-wifi": "{signalStrength}%",
+        "max-length": 20
+    },
+
+
+
+
+
+    "custom/weather": {
+        "exec": "$HOME/.config/waybar/check_weather.sh",
+        "interval": 3600
+    },
+    "custom/media": {
+        "format": "{}",
+        "interval": 1,
+        "exec": "$HOME/.config/waybar/get_media.sh"
+    },
+    "custom/keyboard": {
+        "format": " {}",
+        "interval": 1,
+        "exec": "$HOME/.config/waybar/get_kbdlayout.sh"
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "󱆏",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol"
+    },
+    "custom/quit": {
+        "format": "",
+        "on-click": "swaynag -f 'BigBlueTerm437 Nerd Font'  -t warning -m 'Do you really want to exit sway?' -b 'Yes, exit sway' 'swaymsg exit'"
+    },
+    "sway/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": true,
+        "format": "{name}: {icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    },
+    "sway/language": {
+        "format": "{}",
+        "on-click": "swaymsg input type:keyboard xkb_switch_layout next"
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 14,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": [
+            "Alacritty",
+	        "foot"
+        ],
+        "app_ids-mapping": {
+          "firefoxdeveloperedition": "firefox-developer-edition"
+        }
+    }
+ }
