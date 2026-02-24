@@ -5,12 +5,7 @@
   config,
   pkgs,
   ...
-}: let
-  nixpkgs-tars = "https://github.com/NixOS/nixpkgs/archive/";
-  pr277183 = import (fetchTarball
-    "${nixpkgs-tars}48e8c4b748d2f3800ba09bfa130d8047cea0cac7.tar.gz")
-  {config = config.nixpkgs.config;};
-in {
+}: {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
