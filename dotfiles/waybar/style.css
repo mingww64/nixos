@@ -1,21 +1,23 @@
 * {
   font-size: 12px;
-  /* font-family: "BigBlueTerm437 Nerd Font"; */
-  font-family: "monospace";
+  font-family: "BigBlueTerm437 Nerd Font", "Symbols Nerd Font", "monospace";
 }
 
 window#waybar {
-    background: rgba(255, 255, 255, 0);
+  background: rgba(255, 255, 255, 0);
 }
+
 #workspaces button.focused {
   color: #282020;
   /* border-bottom: 3px solid rgba(33, 43, 86, 0.747); */
 }
+
 #workspaces button {
   padding: 0px 5px;
   color: rgba(33, 43, 86, 0.422);
   /* border-bottom: 3px solid rgba(33, 43, 86, 0); */
 }
+
 #workspaces {
   background: rgb(209, 182, 102);
   border-radius: 10px;
@@ -68,6 +70,7 @@ window#waybar {
   background: #1d1f21;
   color: #c5c8c6;
 }
+
 #pulseaudio {
   margin: 3px 3px 3px 0px;
   padding: 5px 7px 5px 5px;
@@ -83,12 +86,14 @@ window#waybar {
   margin: 3px 0px 3px 0px;
   padding: 5px;
 }
+
 #custom-ping {
   background: #1d1f21;
   color: #c5c8c6;
   margin: 3px 0px 3px 0px;
   padding: 5px;
 }
+
 #clock {
   background: #1d1f21;
   color: #c5c8c6;
@@ -102,6 +107,7 @@ window#waybar {
   background: goldenrod;
   border-radius: 10px;
 }
+
 #taskbar {
   background: rgba(0, 0, 0, 0);
   border-radius: 10px;

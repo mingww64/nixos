@@ -23,4 +23,9 @@
   services.avahi.openFirewall = true;
 
   hardware.bluetooth.enable = true;
+  hardware.bluetooth.settings = {
+    General = {
+      Experimental = true;
+    };
+  };
 }

@@ -1,9 +1,23 @@
 {
     "layer": "top",
     "position": "top",
-    "modules-left": ["custom/media","tray", "sway/workspaces"],
-    "modules-center":["wlr/taskbar"],
-    "modules-right": ["sway/language", "network","custom/ping", "battery", "pulseaudio", "custom/weather", "clock", "custom/quit"],
+    "modules-left": [
+        "custom/media",
+        "tray",
+        "sway/workspaces"
+    ],
+    "modules-center": [
+        "wlr/taskbar"
+    ],
+    "modules-right": [
+        "sway/language",
+        "network",
+        "custom/ping",
+        "pulseaudio",
+        "custom/weather",
+        "clock",
+        "custom/quit"
+    ],
     "clock": {
         "format": "{:%H:%M}",
         "format-alt": "{:%a %b %d}",
@@ -15,13 +29,19 @@
             "warning": 30,
             "critical": 15
         },
-        "bat":"BAT1",
+        "bat": "BAT1",
         "format": "{icon} {capacity}%",
         "format-charging": "󰂄 {capacity}%",
         "format-plugged": " {capacity}%",
         "format-discharging": " {capacity}%",
         "format-alt": "{icon} {time}",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
     },
     "network": {
         "format": "{ifname}",
@@ -31,14 +51,16 @@
         "tooltip-format-wifi": "{signalStrength}%",
         "max-length": 20
     },
-
-
-
-
-
+    "custom/ping": {
+        "format": "{}",
+        "return-type": "json",
+        "interval": 10,
+        "exec": "$HOME/.config/waybar/get_ping.sh"
+    },
     "custom/weather": {
         "exec": "$HOME/.config/waybar/check_weather.sh",
-        "interval": 3600
+        "return-type": "json",
+        "interval": 1800
     },
     "custom/media": {
         "format": "{}",
@@ -64,7 +86,10 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", ""]
+            "default": [
+                "",
+                ""
+            ]
         },
         "scroll-step": 1,
         "on-click": "pavucontrol"
@@ -100,10 +125,10 @@
         "on-click-middle": "close",
         "ignore-list": [
             "Alacritty",
-	        "foot"
+            "foot"
         ],
         "app_ids-mapping": {
-          "firefoxdeveloperedition": "firefox-developer-edition"
+            "firefoxdeveloperedition": "firefox-developer-edition"
         }
     }
- }
+}

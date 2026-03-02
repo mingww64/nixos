@@ -16,12 +16,13 @@ set $right l
 # Your preferred terminal emulator
 set $term foot
 set $browser google-chrome-stable
+set $file_manager foot nnn
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 #set $menu dmenu_path | dmenu | xargs swaymsg exec --
 #set $menu albert toggle | xargs swaymsg exec --
-set $menu ulauncher-toggle | xargs swaymsg exec --
+set $menu /run/current-system/sw/bin/ulauncher-toggle
 ### Output configuration
 # output * render_bit_depth 10
 # Orientation
@@ -88,6 +89,7 @@ bindsym $mod+ctrl+space exec swaymsg "output * dpms on"
     # Start your launcher
     bindsym alt+space exec $menu
     bindsym $mod+alt+space exec $browser
+    bindsym $mod+e exec $file_manager
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -173,7 +175,7 @@ workspace_auto_back_and_forth yes
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
     bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    # bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen

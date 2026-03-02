@@ -20,19 +20,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     antigravity-nix = {
-      url = "github:mingww64/antigravity-nix";
+      url = "github:jacopone/antigravity-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
   outputs = inputs @ {
-    self,
     nixpkgs,
     vscode-server,
-    high-tide-repo,
     nur,
-    ulauncher6,
-    antigravity-nix,
     home-manager,
     ...
   }: let
@@ -41,6 +37,7 @@
     formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;
     nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
       inherit system;
+      specialArgs = {inherit inputs;};
       modules = [
         nur.modules.nixos.default
         vscode-server.nixosModules.default
@@ -49,32 +46,8 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.backupFileExtension = "backup";
+          home-manager.extraSpecialArgs = {inherit inputs;};
         }
-
-        ({
-          config,
-          pkgs,
-          ...
-        }: {
-          services.vscode-server.enable = true;
-          services.vscode-server.enableFHS = true;
-
-          # Use the package directly from the repo's outputs.
-          # This ensures it uses its own nixpkgs-unstable and Adw 1.6+
-          environment.systemPackages = [
-            high-tide-repo.packages.${system}.high-tide
-            antigravity-nix.packages.${system}.google-antigravity-no-fhs
-            (ulauncher6.packages.${system}.ulauncher6.overrideAttrs (oldAttrs: {
-              propagatedBuildInputs =
-                (oldAttrs.propagatedBuildInputs or [])
-                ++ [
-                  pkgs.python3Packages.dbus-python
-                  pkgs.python3Packages.xdg
-                  pkgs.python3Packages.fuzzywuzzy
-                ];
-            }))
-          ];
-        })
 
         ./configuration.nix
       ];

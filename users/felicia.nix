@@ -1,20 +1,60 @@
 {
-  config,
   pkgs,
+  inputs,
   ...
-}: {
+}: let
+  system = pkgs.stdenv.hostPlatform.system;
+in {
   users.users.felicia = {
     isNormalUser = true;
     extraGroups = ["wheel" "aria2" "dialout"]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
+      inputs.high-tide-repo.packages.${system}.high-tide
+      inputs.antigravity-nix.packages.${system}.google-antigravity-no-fhs
       gh
+      amule
+      firefox
+      moonlight-qt
+      seahorse
+      dconf-editor
+      code-cursor
+      gparted
+      pavucontrol
+      playerctl
+      mpv
+      lxmenu-data
+      shared-mime-info
+      remmina
+      tidal-hifi
+      google-chrome
+      thunar
+      xfce4-settings
+      obs-studio
+      qpwgraph
+      easyeffects
+      valent
+      lan-mouse
+      gnome-tweaks
+      nixd
+      alejandra
+      nautilus
+      nnn
+      jq
     ];
   };
 
-  services.displayManager.autoLogin.user = "felicia";
+  # services.displayManager.autoLogin.user = "felicia";
 
   home-manager.users.felicia = {pkgs, ...}: {
     home.stateVersion = "22.11";
+
+    services.rescrobbled = {
+      enable = true;
+      settings = {
+        lastfm-key = "2ef331a96c0f0fa8367bfdd5c53b23cb";
+        lastfm-secret = "77370bc219ed9c74404f0e293bbeda07";
+      };
+    };
 
     xdg.configFile."sway".source = ../dotfiles/sway;
     xdg.configFile."waybar".source = ../dotfiles/waybar;
@@ -35,7 +75,7 @@
         export XDG_SESSION_DESKTOP="sway"
         export QT_QPA_PLATFORMTHEME="gnome"
         export XMODIFIERS="@im=fcitx"
-        export GTK_IM_MODULE="xim"
+        export GTK_IM_MODULE="fcitx"
         export QT_IM_MODULE="fcitx"
         export TERM="foot"
         export TERMINAL="foot"
@@ -97,49 +137,30 @@
 
     home.packages = with pkgs; [
       # Sway / GUI utilities
-      amule
-      firefox
       kickoff
       mako
-      moonlight-qt
       waybar
       xdg-utils
       xclip
       clipnotify
       wl-clipboard
       sway-contrib.grimshot
-      seahorse
-      dconf-editor
-      code-cursor
       glib
-      gparted
-      pavucontrol
-      playerctl
-      mpv
-      lxmenu-data
-      shared-mime-info
       wdisplays
-      remmina
-      tidal-hifi
-      google-chrome
       qgnomeplatform
       qgnomeplatform-qt6
-      thunar
-      xfce4-settings
-      obs-studio
-      qpwgraph
-      easyeffects
-      valent
-      lan-mouse
       hyprpaper
-      gnome-tweaks
       dmenu-wayland
       nwg-look
       linux-wallpaperengine
       networkmanagerapplet
-      nixd
-      alejandra
-      nautilus
     ];
+
+    xdg.mimeApps = {
+      enable = true;
+      defaultApplications = {
+        "inode/directory" = "nnn.desktop";
+      };
+    };
   };
 }

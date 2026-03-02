@@ -15,21 +15,21 @@ with lib; {
   };
   services.displayManager = {
     defaultSession = "sway";
-    gdm = {
-      enable = true;
-      wayland = true;
-    };
   };
   services.desktopManager = {
     gnome.enable = true;
   };
-  programs.dconf.profiles.gdm.databases = [
-    {
-      settings = {
-        "org/gnome/desktop/interface" = {
-          scaling-factor = lib.gvariant.mkUint32 2;
-        };
+  services.greetd = {
+    enable = true;
+    settings = {
+      initial_session = {
+        command = "sway";
+        user = "felicia";
       };
-    }
-  ];
+      default_session = {
+        command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd sway";
+        user = "greeter";
+      };
+    };
+  };
 }
