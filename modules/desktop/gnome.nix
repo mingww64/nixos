@@ -19,6 +19,8 @@ with lib; {
   services.desktopManager = {
     gnome.enable = true;
   };
+  # Disable GNOME's power-profiles-daemon to prevent conflict with TLP
+  services.power-profiles-daemon.enable = false;
   services.greetd = {
     enable = true;
     settings = {

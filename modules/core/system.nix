@@ -32,10 +32,16 @@
   services.gvfs.enable = true;
   services.usbmuxd.enable = true;
   services.flatpak.enable = true;
+  services.envfs.enable = true;
 
   nix.extraOptions = ''
     extra-experimental-features = flakes nix-command
   '';
+
+  environment.shellAliases = {
+    sysup = "sudo nixos-rebuild switch --flake /etc/nixos#desktop";
+    sysupdate = "nix flake update /etc/nixos && sudo nixos-rebuild switch --flake /etc/nixos#desktop";
+  };
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;

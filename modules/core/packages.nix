@@ -14,7 +14,6 @@
   programs.nix-ld.enable = true;
 
   services.prowlarr.enable = true;
-  services.flaresolverr.package = pkgs.nur.repos.xddxdd.flaresolverr-21hsmw;
   services.flaresolverr.enable = true;
 
   services.code-server.enable = true;

@@ -11,6 +11,7 @@
     ./modules/core/networking.nix
     ./modules/core/system.nix
     ./modules/core/packages.nix
+    ./modules/core/power.nix
 
     # Desktop Environments
     ./modules/desktop/de.nix
@@ -28,4 +29,8 @@
     # Users
     ./users/felicia.nix
   ];
+
+  fileSystems."/boot/efi" = {
+    options = ["uid=1000" "gid=100" "umask=007"];
+  };
 }

@@ -34,7 +34,7 @@
   }: let
     system = "x86_64-linux";
   in {
-    formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;
+    formatter.${system} = nixpkgs.legacyPackages.${system}.nixfmt-rfc-style;
     nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
       inherit system;
       specialArgs = {inherit inputs;};
