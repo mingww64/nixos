@@ -16,7 +16,7 @@ set $right l
 # Your preferred terminal emulator
 set $term foot
 set $browser google-chrome-stable
-set $file_manager foot nnn
+set $file_manager foot --app-id=filemanager nnn
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -175,7 +175,7 @@ workspace_auto_back_and_forth yes
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
     bindsym $mod+w layout tabbed
-    # bindsym $mod+e layout toggle split
+    bindsym $mod+d layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
@@ -273,6 +273,7 @@ exec --no-startup-id albert
 
 # clipman
 exec wl-paste -t text --watch clipman store --no-persist
+exec $HOME/.config/sway/clipsync3.sh
 
 # IME
 exec --no-startup-id fcitx5 -d
@@ -311,7 +312,6 @@ include $HOME/.base16/sway
 include $HOME/.config/sway/theme
 #exec dbus-sway-environment
 #exec configure-gtk
-#exec $HOME/.config/sway/clipsync3.sh
 exec high-tide
 # exec linux-wallpaperengine --screen-root DP-1 --bg 1845706469
 #exec foot lan-mouse

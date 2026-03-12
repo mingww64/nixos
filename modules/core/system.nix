@@ -3,6 +3,8 @@
   pkgs,
   ...
 }: {
+  boot.kernelModules = ["ufs"];
+
   nix.gc = {
     automatic = true;
     dates = "weekly";
@@ -37,6 +39,10 @@
   nix.extraOptions = ''
     extra-experimental-features = flakes nix-command
   '';
+
+  environment.variables = {
+    SUDO_ASKPASS = "${pkgs.lxqt.lxqt-openssh-askpass}/bin/lxqt-openssh-askpass";
+  };
 
   environment.shellAliases = {
     sysup = "sudo nixos-rebuild switch --flake /etc/nixos#desktop";

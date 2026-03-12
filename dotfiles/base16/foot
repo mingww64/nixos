@@ -1,6 +1,6 @@
 # Base16 oomox-wallpaper - foot color config
 # oomox-wallpaper
-[colors]
+[colors-dark]
 background=505050
 foreground=e4bfff
 

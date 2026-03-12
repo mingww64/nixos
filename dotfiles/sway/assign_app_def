@@ -12,8 +12,9 @@ for_window [app_id="code.*"] focus
 
 assign [class="Microsoft Teams - Preview"] 5
 for_window [class="Microsoft Teams - Preview"] focus
-
 assign [app_id="valent"] 5
+assign [class="valent"] 5
+
 #for_window [app_id="valent"] move scratchpad
 
 assign [app_id="lan-mouse"] 5
@@ -59,6 +60,9 @@ for_window [app_id="xsensors"] floating enable
 for_window [title="Save File"] floating enable
 for_window [app_id="Alacritty"] floating enable, border pixel 5, sticky enable, focus
 for_window [app_id="foot"] floating enable, border pixel 5, sticky enable, focus
+for_window [app_id="filemanager"] floating enable, border pixel 5, sticky enable, focus
+for_window [app_id="lxqt-openssh-askpass"] floating enable, resize set width 804 px height 207 px
+for_window [app_id="lxqt-policykit-agent"] floating enable, resize set width 804 px height 207 px
 
 
 # Inhibit idle

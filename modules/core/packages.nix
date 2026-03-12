@@ -37,6 +37,10 @@
     go
     steam-devices-udev-rules
     exfatprogs
+    xfsprogs
+    xhost
+    gparted
+    lxqt.lxqt-openssh-askpass
   ];
 
   programs.steam = {

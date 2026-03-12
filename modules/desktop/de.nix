@@ -43,6 +43,14 @@ with lib; {
     };
   };
 
+  security.polkit.extraConfig = ''
+    polkit.addRule(function(action, subject) {
+      if (action.id == "org.gnome.gparted" && subject.isInGroup("wheel")) {
+        return polkit.Result.YES;
+      }
+    });
+  '';
+
   services.pipewire = {
     enable = true;
     alsa.enable = true;

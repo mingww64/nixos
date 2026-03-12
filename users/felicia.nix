@@ -18,7 +18,6 @@ in {
       seahorse
       dconf-editor
       code-cursor
-      gparted
       pavucontrol
       playerctl
       mpv
@@ -155,6 +154,9 @@ in {
       linux-wallpaperengine
       networkmanagerapplet
     ];
+
+    home.shellAliases = {
+    };
 
     xdg.mimeApps = {
       enable = true;
