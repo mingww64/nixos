@@ -1,3 +1,5 @@
+@import url("../../.base16/waybar");
+
 * {
   font-size: 12px;
   font-family: "BigBlueTerm437 Nerd Font", "Symbols Nerd Font", "monospace";
@@ -8,18 +10,19 @@ window#waybar {
 }
 
 #workspaces button.focused {
-  color: #282020;
+  color: @base00;
+  background: @base0D;
   /* border-bottom: 3px solid rgba(33, 43, 86, 0.747); */
 }
 
 #workspaces button {
   padding: 0px 5px;
-  color: rgba(33, 43, 86, 0.422);
+  color: @base01;
   /* border-bottom: 3px solid rgba(33, 43, 86, 0); */
 }
 
 #workspaces {
-  background: rgb(209, 182, 102);
+  background: @base0D;
   border-radius: 10px;
   margin: 3px;
   padding: 3px 2px;
@@ -27,9 +30,9 @@ window#waybar {
 
 #battery {
   margin: 3px 0px 3px 0px;
-  background: #1d1f21;
+  background: @base00;
   padding: 5px;
-  color: #c5c8c6;
+  color: @base05;
 }
 
 #custom-quit {
@@ -37,26 +40,25 @@ window#waybar {
   padding: 5px 7px 5px 5px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  border-right: 2px solid #1d1f21;
-  border-top: 2px solid #1d1f21;
-  border-bottom: 2px solid #1d1f21;
-  background: #F00;
-  color: #FFF;
+  border-right: 2px solid @base00;
+  border-top: 2px solid @base00;
+  border-bottom: 2px solid @base00;
+  background: @base08;
+  color: @base05;
 }
 
 #custom-weather {
   margin: 3px 0px 3px 3px;
   padding: 5px;
-  color: #FFF;
-  background: #1d1f21;
+  color: @base05;
+  background: @base00;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  color: #c5c8c6;
 }
 
 #language {
-  background: #1d1f21;
-  color: #c5c8c6;
+  background: @base00;
+  color: @base05;
   padding: 5px 5px 5px 7px;
   margin: 3px 0px 3px 3px;
   border-top-left-radius: 10px;
@@ -67,36 +69,36 @@ window#waybar {
   margin: 3px;
   padding: 5px 7px 5px 7px;
   border-radius: 10px;
-  background: #1d1f21;
-  color: #c5c8c6;
+  background: @base00;
+  color: @base05;
 }
 
 #pulseaudio {
   margin: 3px 3px 3px 0px;
   padding: 5px 7px 5px 5px;
-  background: #1d1f21;
+  background: @base00;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  color: #c5c8c6;
+  color: @base05;
 }
 
 #network {
-  background: #1d1f21;
-  color: #c5c8c6;
+  background: @base00;
+  color: @base05;
   margin: 3px 0px 3px 0px;
   padding: 5px;
 }
 
 #custom-ping {
-  background: #1d1f21;
-  color: #c5c8c6;
+  background: @base00;
+  color: @base05;
   margin: 3px 0px 3px 0px;
   padding: 5px;
 }
 
 #clock {
-  background: #1d1f21;
-  color: #c5c8c6;
+  background: @base00;
+  color: @base05;
   margin: 3px 0px 3px 0px;
   padding: 5px;
 }
@@ -104,7 +106,7 @@ window#waybar {
 #tray {
   margin: 3px;
   padding: 5px 7px 5px 7px;
-  background: goldenrod;
+  background: @base0A;
   border-radius: 10px;
 }
 

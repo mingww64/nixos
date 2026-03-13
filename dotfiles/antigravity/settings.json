@@ -5,7 +5,7 @@
   "diffEditor.codeLens": true,
   "geminicodeassist.project": "quadratic-webbing-9jkxm",
   "github.copilot.nextEditSuggestions.enabled": true,
-  "workbench.colorTheme": "Default Dark+",
+  "workbench.colorTheme": "Base16 oomox-wallpaper_lcars",
   "nix.enableLanguageServer": true,
   "nix.serverPath": "nixd",
   "nix.serverSettings": {

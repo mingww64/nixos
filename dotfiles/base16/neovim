@@ -1,6 +1,6 @@
 -- bradcush/base16-nvim (https://github.com/bradcush/base16-nvim)
 -- by Bradley Cushing (https://github.com/bradcush)
--- oomox-wallpaper scheme by oomox-wallpaper
+-- oomox-wallpaper_lcars scheme by oomox-wallpaper_lcars
 -- Based on existing work with references below
 -- base16-vim (https://github.com/chriskempson/base16-vim)
 -- by Chris Kempson (http://chriskempson.com)
@@ -8,22 +8,22 @@
 -- by Adam P. Regasz-Rethy (https://github.com/RRethy)
 -- Base16 color variables
 local colors = {
-    base00 = "#505050",
-    base01 = "#505050",
-    base02 = "#6c514f",
-    base03 = "#a7a7a7",
-    base04 = "#646464",
-    base05 = "#ffffff",
-    base06 = "#f9e9fe",
-    base07 = "#ffffff",
-    base08 = "#a07aad",
-    base09 = "#9483a5",
-    base0A = "#9483a5",
-    base0B = "#5fb9a3",
-    base0C = "#5fb9a3",
-    base0D = "#a07aad",
-    base0E = "#a07aad",
-    base0F = "#866a95"
+    base00 = "#08081e",
+    base01 = "#16203d",
+    base02 = "#444e6b",
+    base03 = "#6c6381",
+    base04 = "#00000a",
+    base05 = "#d0bfe4",
+    base06 = "#c2c2d6",
+    base07 = "#515c73",
+    base08 = "#e84381",
+    base09 = "#ff8357",
+    base0A = "#ffc57e",
+    base0B = "#d9bd92",
+    base0C = "#bf97da",
+    base0D = "#c6a9d6",
+    base0E = "#d72181",
+    base0F = "#df4e58"
 }
 
 -- Highlighting for indiividual groups
@@ -46,7 +46,7 @@ local setup = function(collections)
     -- Setting highlighting and syntax
     vim.cmd('highlight clear')
     vim.cmd('syntax reset')
-    vim.g.colors_name = "base16-oomox-wallpaper"
+    vim.g.colors_name = "base16-oomox-wallpaper_lcars"
 
     -- Loop through highlighting collections
     for _, collection in pairs(collections) do
@@ -93,4 +93,3 @@ setup({
     lsp = makeLspCollection(colors),
     treesitter = makeTreesitterCollection(colors)
 })
-

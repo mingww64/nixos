@@ -26,7 +26,7 @@
     "diffEditor.codeLens": true,
     "geminicodeassist.project": "quadratic-webbing-9jkxm",
     "github.copilot.nextEditSuggestions.enabled": true,
-    "workbench.colorTheme": "Default Dark+",
+    "workbench.colorTheme": "Base16 oomox-wallpaper_lcars",
     "terminal.integrated.allowedLinkSchemes": [
         "file",
         "http",
@@ -41,7 +41,7 @@
         "nix-shell": true,
         "mkdir": true,
         "cp": true,
-        "nix": true,
+        "nix": true
     },
     "chat.edits2.enabled": true,
     "chat.mcp.gallery.enabled": true,

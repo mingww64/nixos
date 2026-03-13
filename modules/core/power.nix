@@ -22,8 +22,8 @@
       DISK_DEVICES = "sda";
       DISK_APM_LEVEL_ON_AC = "127";
       DISK_APM_LEVEL_ON_BAT = "127";
-      DISK_SPINDOWN_TIMEOUT_ON_AC = "120"; # 120 * 5s = 10 mins
-      DISK_SPINDOWN_TIMEOUT_ON_BAT = "120";
+      DISK_SPINDOWN_TIMEOUT_ON_AC = "10"; # 10 * 5s = 30 secs
+      DISK_SPINDOWN_TIMEOUT_ON_BAT = "10";
     };
   };
 }

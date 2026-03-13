@@ -7,24 +7,29 @@
 assign [app_id="google-chrome|firefox"] 2
 for_window [app_id="google-chrome|firefox"] focus
 
-assign [app_id="code.*"] 3
-for_window [app_id="code.*"] focus
+assign [app_id="code.*|antigravity"] 3
+for_window [app_id="code.*|antigravity"] focus
 
 assign [class="Microsoft Teams - Preview"] 5
 for_window [class="Microsoft Teams - Preview"] focus
+assign [app_id="chrome-.*-Default" title="(?i)teams"] 5
+for_window [app_id="chrome-.*-Default" title="(?i)teams"] focus
 assign [app_id="valent"] 5
 assign [class="valent"] 5
 
-#for_window [app_id="valent"] move scratchpad
+for_window [app_id="valent"] move scratchpad
+for_window [class="valent"] move scratchpad
 
 assign [app_id="lan-mouse"] 5
 #for_window [app_id="lan-mouse"] move scratchpad
 
-assign [app_id="discord"] 5
-for_window [app_id="discord"] focus
+assign [app_id="discord|^chrome-.*-Default$" title="(?i)discord"] 5
+for_window [app_id="discord|^chrome-.*-Default$" title="(?i)discord"] focus
 
 assign [app_id="org.telegram.desktop"] 5
 for_window [app_id="org.telegram.desktop"] focus
+assign [app_id="chrome-.*-Default" title="(?i)gmail"] 5
+for_window [app_id="chrome-.*-Default" title="(?i)gmail"] focus
 
 assign [title=".*([Mm]usic|[Tt]idal|[Hh]igh.[Tt]ide).*"] 4
 #for_window [title=".*([Mm]usic|[Tt]idal).*"] move scratchpad

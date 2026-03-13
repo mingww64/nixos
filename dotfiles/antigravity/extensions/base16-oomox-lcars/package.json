@@ -1,0 +1,17 @@
+{
+    "name": "base16-oomox-lcars",
+    "displayName": "Base16 oomox-wallpaper_lcars",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "contributes": {
+        "themes": [
+            {
+                "label": "Base16 oomox-wallpaper_lcars",
+                "uiTheme": "vs-dark",
+                "path": "./theme.json"
+            }
+        ]
+    }
+}
