@@ -10,12 +10,12 @@
         // Base colors
         // "focusBorder": "#f00", //7
         "foreground": "#d0bfe4", //5
-        "disabledForeground": "#00000a", //4
+        "disabledForeground": "#837a9c", //4
         "widget.shadow": "#08081e", //0
         "selection.background": "#c6a9d6", //D
         "descriptionForeground": "#6c6381", //3
         "errorForeground": "#e84381", //8
-        "icon.foreground": "#00000a", //4
+        "icon.foreground": "#837a9c", //4
         // "sash.hoverBorder": "#ff0000",
 
         // Window border
@@ -40,10 +40,10 @@
         "button.background": "#c6a9d6", //D
         "button.foreground": "#515c73", //7
         // "button.border": "#ff0000",
-        "button.hoverBackground": "#00000a", //4
+        "button.hoverBackground": "#837a9c", //4
         "button.secondaryForeground": "#515c73", //7
         "button.secondaryBackground": "#d72181", //E
-        "button.secondaryHoverBackground": "#00000a", //4
+        "button.secondaryHoverBackground": "#837a9c", //4
         "checkbox.background": "#08081e", //0
         "checkbox.foreground": "#d0bfe4", //5
         // "checkbox.border": "#f00",
@@ -174,7 +174,7 @@
         "tab.inactiveBackground": "#16203d", //1
         // "tab.unfocusedInactiveBackground": "#ff0000",
         "tab.inactiveForeground": "#6c6381", //3
-        "tab.unfocusedActiveForeground": "#00000a", //4
+        "tab.unfocusedActiveForeground": "#837a9c", //4
         "tab.unfocusedInactiveForeground": "#6c6381", //3
         "tab.hoverBackground": "#444e6b", //2
         "tab.unfocusedHoverBackground": "#444e6b", //2
@@ -194,7 +194,7 @@
         "editor.background": "#08081e", //0
         "editor.foreground": "#d0bfe4", //5
         "editorLineNumber.foreground": "#6c6381", //3
-        "editorLineNumber.activeForeground": "#00000a", //4
+        "editorLineNumber.activeForeground": "#837a9c", //4
         // "editorCursor.background": "#f00",
         "editorCursor.foreground": "#d0bfe4", //5
         "editor.selectionBackground": "#444e6b", //2
@@ -227,7 +227,7 @@
         // "editor.symbolHighlightBorder": "#ff0000",
         "editorWhitespace.foreground": "#6c6381", //3
         "editorIndentGuide.background": "#6c6381", //3
-        "editorIndentGuide.activeBackground": "#00000a", //4
+        "editorIndentGuide.activeBackground": "#837a9c", //4
         "editorInlayHint.background": "#16203d", //1
         "editorInlayHint.foreground": "#d0bfe4", //5
         "editorInlayHint.typeBackground": "#16203d", //1
@@ -305,7 +305,7 @@
         "editorGutter.modifiedBackground": "#d72181", //E
         "editorGutter.addedBackground": "#d9bd92", //B
         "editorGutter.deletedBackground": "#e84381", //8
-        "editorGutter.commentRangeForeground": "#00000a", //4
+        "editorGutter.commentRangeForeground": "#837a9c", //4
         "editorGutter.foldingControlForeground": "#d0bfe4", //5
         // "editorCommentsWidget.resolvedBorder": "#d9bd92", //B
         // "editorCommentsWidget.unresolvedBorder": "#e84381", //8
@@ -584,9 +584,9 @@
         "testing.iconFailed": "#e84381", //8
         "testing.iconErrored": "#df4e58", //F
         "testing.iconPassed": "#d9bd92", //B
-        "testing.runAction": "#00000a", //4
+        "testing.runAction": "#837a9c", //4
         "testing.iconQueued": "#ffc57e", //A
-        "testing.iconUnset": "#00000a", //4
+        "testing.iconUnset": "#837a9c", //4
         "testing.iconSkipped": "#d72181", //E
         // "testing.peekBorder": "#ff0000",
         "testing.peekHeaderBackground": "#16203d", //1
@@ -698,7 +698,7 @@
 
         // Debug Icons colors
         "debugIcon.breakpointForeground": "#e84381", //8
-        "debugIcon.breakpointDisabledForeground": "#00000a", //4
+        "debugIcon.breakpointDisabledForeground": "#837a9c", //4
         "debugIcon.breakpointUnverifiedForeground": "#444e6b", //2
         "debugIcon.breakpointCurrentStackframeForeground": "#ffc57e", //A
         "debugIcon.breakpointStackframeForeground": "#df4e58", //F

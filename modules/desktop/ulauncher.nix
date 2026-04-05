@@ -32,7 +32,7 @@ in {
           if [ -e "$out/$file" ]; then
             rm "$out/$file"
             cp "${inputs.ulauncher6.packages.${system}.ulauncher6}/$file" "$out/$file"
-            sed -i "s|Exec.*=.*ulauncher|Exec=$out/bin/ulauncher|g" "$out/$file"
+            sed -i "s|ExecStart=.*ulauncher|ExecStart=$out/bin/ulauncher|g" "$out/$file"
           fi
         done
       '';

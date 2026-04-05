@@ -10,11 +10,11 @@
         builtins.readFile
         (builtins.fetchurl {
           inherit url;
-          sha256 = "1flk2c4l956151mr6qjcbni683ryyl1mkgpz27vv3w3h2g8if6fw";
+          sha256 = "1dwzckimhg0ans9knv756bzc6caslq02wpfbkj7r7ymm47bwly1i";
         })
       ));
 
-  trackerList = getFormattedTrackerList "https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt" "1flk2c4l956151mr6qjcbni683ryyl1mkgpz27vv3w3h2g8if6fw";
+  trackerList = getFormattedTrackerList "https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt" "1dwzckimhg0ans9knv756bzc6caslq02wpfbkj7r7ymm47bwly1i";
 in {
   services.aria2 = {
     enable = true;

@@ -1,13 +1,15 @@
-#media=$(playerctl metadata -s -f "({{playerName}}) {{artist}} - {{title}}")
-media=$(playerctl metadata -s -f "{{title}}")
 player_status=$(playerctl status -s)
 
-if [[ $player_status = "Playing" ]]; then
-	song_status=''
-elif [[ $player_status = "Paused" ]]; then
-	song_status=''
-else
-	song_status='Music stopped'
+if [ -z "$player_status" ]; then
+    echo '{"text": "Music stopped", "alt": "Stopped", "class": "Stopped"}'
+    exit 0
 fi
 
-echo -e "$song_status $media"
+media=$(playerctl metadata --format "{{title}}" 2>/dev/null || echo "")
+media=${media//\"/\\\"}
+
+if [ -n "$media" ]; then
+    media=" $media"
+fi
+
+echo "{\"text\": \"$media\", \"alt\": \"$player_status\", \"class\": \"$player_status\"}"

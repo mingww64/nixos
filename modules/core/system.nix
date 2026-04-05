@@ -46,7 +46,7 @@
 
   environment.shellAliases = {
     sysup = "sudo nixos-rebuild switch --flake /etc/nixos#desktop";
-    sysupdate = "nix flake update /etc/nixos && sudo nixos-rebuild switch --flake /etc/nixos#desktop";
+    sysupdate = "nix flake update --flake /etc/nixos && sudo nixos-rebuild switch --flake /etc/nixos#desktop";
   };
 
   # Enable the OpenSSH daemon.

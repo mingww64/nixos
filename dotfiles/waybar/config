@@ -63,7 +63,13 @@
         "interval": 1800
     },
     "custom/media": {
-        "format": "{}",
+        "format": "{icon}{text}",
+        "return-type": "json",
+        "format-icons": {
+            "Playing": "",
+            "Paused": "",
+            "Stopped": ""
+        },
         "interval": 1,
         "exec": "$HOME/.config/waybar/get_media.sh"
     },

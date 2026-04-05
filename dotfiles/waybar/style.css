@@ -17,8 +17,15 @@ window#waybar {
 
 #workspaces button {
   padding: 0px 5px;
-  color: @base01;
+  color: @base00;
   /* border-bottom: 3px solid rgba(33, 43, 86, 0); */
+}
+
+#workspaces button:hover {
+  background: @base02;
+  color: @base05;
+  box-shadow: inherit;
+  text-shadow: inherit;
 }
 
 #workspaces {
@@ -111,6 +118,36 @@ window#waybar {
 }
 
 #taskbar {
-  background: rgba(0, 0, 0, 0);
-  border-radius: 10px;
+  background: transparent;
+}
+
+#taskbar button {
+  box-shadow: none;
+  text-shadow: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 4px 8px;
+  margin: 0 2px;
+  min-width: 0;
+  transition: all 0.2s ease;
+}
+
+#taskbar button.active {
+  background: transparent;
+  box-shadow: inset 0 -3px 0 @base0D;
+}
+
+#taskbar button:hover {
+  background: transparent;
+  box-shadow: inset 0 -3px 0 @base05;
+}
+
+#taskbar button label {
+  all: unset;
+}
+
+#taskbar button image {
+  margin: 0;
+  padding: 0;
 }

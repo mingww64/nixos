@@ -77,5 +77,11 @@ for_window [app_id="google-chrome"] inhibit_idle fullscreen
 for_window [app_id="vlc"] inhibit_idle fullscreen
 for_window [app_id="org.jellyfin.jellyfinmediaplayer"] inhibit_idle fullscreen
 
+for_window [class="(?i).*(chrome|firefox|brave|chromium).*"] inhibit_idle visible
+for_window [app_id="(?i).*(chrome|firefox|brave|chromium).*"] inhibit_idle visible
+for_window [class="(?i).*(vlc|mpv).*"] inhibit_idle visible
+for_window [app_id="(?i).*(vlc|mpv).*"] inhibit_idle visible
+for_window [class="(?i).*(code|cursor|vscodium).*"] inhibit_idle visible
+for_window [app_id="(?i).*(code|cursor|vscodium).*"] inhibit_idle visible
 
 for_window [app_id="albert"] focus
