@@ -43,6 +43,9 @@
     xhost
     gparted
     lxqt.lxqt-openssh-askpass
+    networkmanager-openconnect
+    openconnect
+    iw
   ];
 
   programs.steam = {

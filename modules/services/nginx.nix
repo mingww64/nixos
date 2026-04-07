@@ -6,6 +6,7 @@
     recommendedTlsSettings = true;
     virtualHosts."_" = {
       default = true;
+      extraConfig = "absolute_redirect off;";
       locations."= /wallpaper.jpg" = {
         alias = ../../dotfiles/sway/wallpaper.jpg;
       };

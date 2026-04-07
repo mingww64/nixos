@@ -63,13 +63,13 @@
         "inputOption.activeBorder": "#ff8357", //9
         "inputOption.activeForeground": "#d0bfe4", //5
         "inputValidation.errorBackground": "#e84381", //8
-        "inputValidation.errorForeground": "#d0bfe4", //5
+        "inputValidation.errorForeground": "#08081e", //0
         "inputValidation.errorBorder": "#e84381", //8
         "inputValidation.infoBackground": "#c6a9d6", //D
-        "inputValidation.infoForeground": "#d0bfe4", //5
+        "inputValidation.infoForeground": "#08081e", //0
         "inputValidation.infoBorder": "#c6a9d6", //D
         "inputValidation.warningBackground": "#ffc57e", //A
-        "inputValidation.warningForeground": "#d0bfe4", //5
+        "inputValidation.warningForeground": "#08081e", //0
         "inputValidation.warningBorder": "#ffc57e", //A
 
         // Scrollbar control
@@ -487,9 +487,9 @@
         "notification.infoBackground": "#bf97da", //C
         "notification.infoForeground": "#515c73", //7
         "notification.warningBackground": "#ffc57e", //A
-        "notification.warningForeground": "#515c73", //7
+        "notification.warningForeground": "#08081e", //0
         "notification.errorBackground": "#e84381", //8
-        "notification.errorForeground": "#515c73", //7
+        "notification.errorForeground": "#08081e", //0
         // Above is no longer supported as of 1.21
 
         // Banner colors
