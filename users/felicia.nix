@@ -44,7 +44,7 @@ in {
 
   # services.displayManager.autoLogin.user = "felicia";
 
-  home-manager.users.felicia = {pkgs, ...}: {
+  home-manager.users.felicia = {pkgs, config, ...}: {
     home.stateVersion = "22.11";
 
     services.rescrobbled = {
@@ -96,6 +96,7 @@ in {
       gtk3.extraConfig = {
         gtk-application-prefer-dark-theme = 1;
       };
+      gtk4.theme = config.gtk.theme;
       gtk4.extraConfig = {
         gtk-application-prefer-dark-theme = 1;
       };

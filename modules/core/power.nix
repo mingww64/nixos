@@ -65,4 +65,10 @@
       DISK_SPINDOWN_TIMEOUT_ON_AC = lib.mkForce "0";
     };
   };
+
+  # Aliases for switching modes
+  environment.shellAliases = {
+    server-on = "sudo /run/current-system/specialisation/server/bin/switch-to-configuration switch";
+    server-off = "sudo /run/current-system/bin/switch-to-configuration switch";
+  };
 }
