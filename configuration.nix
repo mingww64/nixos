@@ -25,6 +25,7 @@
     ./modules/services/aria2.nix
     ./modules/services/rclone.nix
     ./modules/services/ucla-vpn.nix
+    ./modules/services/nginx.nix
 
     # Users
     ./users/felicia.nix

@@ -61,6 +61,8 @@ in {
     home.file.".vscode/extensions/base16-oomox-lcars".source = ../dotfiles/vscode/extensions/base16-oomox-lcars;
     xdg.configFile."Antigravity/User/settings.json".source = ../dotfiles/antigravity/settings.json;
     home.file.".antigravity/extensions/base16-oomox-lcars".source = ../dotfiles/antigravity/extensions/base16-oomox-lcars;
+    home.file.".local/share/code-server/User/settings.json".source = ../dotfiles/antigravity/settings.json;
+    home.file.".local/share/code-server/extensions/base16-oomox-lcars".source = ../dotfiles/vscode/extensions/base16-oomox-lcars;
     home.file.".base16".source = ../dotfiles/base16;
 
     wayland.windowManager.sway = {

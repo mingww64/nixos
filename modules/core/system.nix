@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   ...
 }: {
@@ -42,6 +41,8 @@
 
   environment.variables = {
     SUDO_ASKPASS = "${pkgs.lxqt.lxqt-openssh-askpass}/bin/lxqt-openssh-askpass";
+    GEMINI_API_KEY = "AIzaSyACqY53X54y9BsmdE1j667dEsv1KRzYi38";
+    GOOGLE_API_KEY = "AIzaSyACqY53X54y9BsmdE1j667dEsv1KRzYi38";
   };
 
   environment.shellAliases = {

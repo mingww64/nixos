@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   ...
 }: {
@@ -16,7 +15,10 @@
   services.prowlarr.enable = true;
   services.flaresolverr.enable = true;
 
-  services.code-server.enable = true;
+  services.code-server = {
+    enable = true;
+    user = "felicia";
+  };
 
   environment.systemPackages = with pkgs; [
     droidcam

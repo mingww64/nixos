@@ -8,7 +8,7 @@ assign [app_id="google-chrome|firefox"] 2
 for_window [app_id="google-chrome|firefox"] focus
 
 assign [app_id="code.*|antigravity"] 3
-for_window [app_id="code.*|antigravity"] focus
+for_window [app_id="code.*|antigravity"] focus, opacity 0.95
 
 assign [class="Microsoft Teams - Preview"] 5
 for_window [class="Microsoft Teams - Preview"] focus
