@@ -259,6 +259,7 @@ bar {
 #
 
 exec --no-startup-id dbus-update-activation-environment --all
+exec --no-startup-id /run/current-system/sw/libexec/polkit-gnome-authentication-agent-1
 exec nm-applet
 exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
 #
@@ -267,8 +268,8 @@ exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11,secrets,ss
 bindsym $mod+n exec "makoctl dismiss"
 bindsym $mod+Shift+n exec "makoctl dismiss -a"
 bindsym $mod+Shift+m exec "makoctl menu dmenu-wl"
-# Albert
-exec --no-startup-id albert
+# Ulauncher
+exec --no-startup-id ulauncher --hide-window
 
 # clipman
 exec wl-paste -t text --watch clipman store --no-persist
@@ -284,7 +285,7 @@ exec blueman-applet
 exec mako -c $HOME/.base16/mako
 
 # KDE Connect
-exec valent
+exec kdeconnect-indicator
 
 # Polkit
 # exec /usr/lib/polkit-kde-authentication-agent-1
@@ -302,16 +303,14 @@ input type:pointer {
 
 # Map tablet
 
-input type:tablet_tool map_to_output HDMI-A-1
+# input type:tablet_tool map_to_output HDMI-A-1
 
 
 include /etc/sway/config.d/*
 include $HOME/.config/sway/assign_app_def
 include $HOME/.base16/sway
 include $HOME/.config/sway/theme
-#exec dbus-sway-environment
-#exec configure-gtk
+
 exec high-tide
 # exec linux-wallpaperengine --screen-root DP-1 --bg 1845706469
-#exec foot lan-mouse
 workspace 1

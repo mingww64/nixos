@@ -1,53 +1,46 @@
+# ==============================================================================
+# Workspace Assignments & Window Focus Rules
+# ==============================================================================
 
-# Assign workspaces
+# Workspace 2: Web Browsers
+assign [app_id="google-chrome"] 2
+for_window [app_id="google-chrome"] focus
 
-#assign [app_id="firefox.*"] 2
-#for_window [app_id="firefox.*"] focus
+# Workspace 3: Code Editors
+assign [app_id="antigravity"] 3
+for_window [app_id="antigravity"] focus, opacity 0.95
 
-assign [app_id="google-chrome|firefox"] 2
-for_window [app_id="google-chrome|firefox"] focus
+# Workspace 4: Media & Entertainment
+assign [title=".*([Tt]idal|[Hh]igh.[Tt]ide).*"] 4
 
-assign [app_id="code.*|antigravity"] 3
-for_window [app_id="code.*|antigravity"] focus, opacity 0.95
+# Workspace 5: Communication (Web Apps) & Connectivity
+assign [app_id="chrome-.*-Default" title="(?i)(discord|teams|telegram|gmail)"] 5
+for_window [app_id="chrome-.*-Default" title="(?i)(discord|teams|telegram|gmail)"] focus, opacity 0.95
 
-assign [class="Microsoft Teams - Preview"] 5
-for_window [class="Microsoft Teams - Preview"] focus
-assign [app_id="chrome-.*-Default" title="(?i)teams"] 5
-for_window [app_id="chrome-.*-Default" title="(?i)teams"] focus
-assign [app_id="valent"] 5
-assign [class="valent"] 5
-
-for_window [app_id="valent"] move scratchpad
-for_window [class="valent"] move scratchpad
-
+assign [app_id="(?i)kdeconnect.*"] 5
+assign [class="(?i)kdeconnect.*"] 5
 assign [app_id="lan-mouse"] 5
-#for_window [app_id="lan-mouse"] move scratchpad
-
-assign [app_id="discord|^chrome-.*-Default$" title="(?i)discord"] 5
-for_window [app_id="discord|^chrome-.*-Default$" title="(?i)discord"] focus
-
-assign [app_id="org.telegram.desktop"] 5
-for_window [app_id="org.telegram.desktop"] focus
-assign [app_id="chrome-.*-Default" title="(?i)gmail"] 5
-for_window [app_id="chrome-.*-Default" title="(?i)gmail"] focus
-
-assign [title=".*([Mm]usic|[Tt]idal|[Hh]igh.[Tt]ide).*"] 4
-#for_window [title=".*([Mm]usic|[Tt]idal).*"] move scratchpad
 
 
+# ==============================================================================
+# Floating Window Rules
+# ==============================================================================
 
-# set floating (nontiling)for apps needing it:
-for_window [class="Yad" instance="yad"] floating enable
-for_window [app_id="blueman-manager"] floating enable,  resize set width 40 ppt height 30 ppt
+# System Popups & GUI Utilities
+for_window [app_id="pavucontrol"] floating enable, sticky enable, resize set width 550 px height 600px, move position cursor, move down 35, opacity 0.95
+for_window [app_id="blueman-manager"] floating enable, resize set width 40 ppt height 30 ppt, opacity 0.95
+for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable, opacity 0.95
+for_window [app_id="org.corectrl.CoreCtrl"] floating enable, resize set width 60 ppt height 70 ppt, opacity 0.95
+for_window [app_id="rquickshare"] floating enable
+for_window [title="nmtui"] floating enable, resize set width 50 ppt height 70 ppt
+for_window [title="htop"] floating enable, resize set width 50 ppt height 70 ppt
+for_window [app_id="lxqt-openssh-askpass"] floating enable, resize set width 804 px height 207 px
 
-# set floating (nontiling) for special apps:
-for_window [class="Xsane" instance="xsane"] floating enable
-for_window [app_id="pavucontrol"] floating enable, sticky enable, resize set width 550 px height 600px, move position cursor, move down 35
-for_window [class="qt5ct" instance="qt5ct"] floating enable, resize set width 60 ppt height 50 ppt
-for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable
-for_window [app_id="pamac-manager"] floating enable, resize set width 80 ppt height 70 ppt
+# Terminals & File Managers
+for_window [app_id="foot"] floating enable, border pixel 5, sticky enable, focus, opacity 0.85
+for_window [app_id="filemanager"] floating enable, border pixel 5, sticky enable, focus, opacity 0.85
 
-# set floating for window roles
+# Window roles / types that should float natively
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="bubble"] floating enable
 for_window [window_role="task_dialog"] floating enable
@@ -56,32 +49,27 @@ for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
 for_window [window_role="About"] floating enable
 for_window [title="File Operation Progress"] floating enable, border pixel 1, sticky enable, resize set width 40 ppt height 30 ppt
-# for_window [app_id="firefox*" title="Library"] floating enable, border pixel 1, sticky enable, resize set width 40 ppt height 30 ppt
-for_window [app_id="floating_shell_portrait"] floating enable, border pixel 1, sticky enable, resize set width 30 ppt height 40 ppt
 for_window [title="Picture in picture"] floating enable, sticky enable
-for_window [title="nmtui"] floating enable, resize set width 50 ppt height 70 ppt
-for_window [title="htop"] floating enable, resize set width 50 ppt height 70 ppt
-for_window [app_id="xsensors"] floating enable
 for_window [title="Save File"] floating enable
-for_window [app_id="Alacritty"] floating enable, border pixel 5, sticky enable, focus
-for_window [app_id="foot"] floating enable, border pixel 5, sticky enable, focus
-for_window [app_id="filemanager"] floating enable, border pixel 5, sticky enable, focus
-for_window [app_id="lxqt-openssh-askpass"] floating enable, resize set width 804 px height 207 px
-for_window [app_id="lxqt-policykit-agent"] floating enable, resize set width 804 px height 207 px
+
+# App launcher focus
+for_window [app_id="ulauncher"] focus
+for_window [class="Ulauncher"] focus
 
 
-# Inhibit idle
-for_window [app_id="firefox.*"] inhibit_idle fullscreen
-for_window [app_id="Chromium"] inhibit_idle fullscreen
+# ==============================================================================
+# Inhibit Idle Rules
+# ==============================================================================
+
+# Browsers
 for_window [app_id="google-chrome"] inhibit_idle fullscreen
-for_window [app_id="vlc"] inhibit_idle fullscreen
-for_window [app_id="org.jellyfin.jellyfinmediaplayer"] inhibit_idle fullscreen
+for_window [class="(?i).*chrome.*"] inhibit_idle visible
+for_window [app_id="(?i).*chrome.*"] inhibit_idle visible
 
-for_window [class="(?i).*(chrome|firefox|brave|chromium).*"] inhibit_idle visible
-for_window [app_id="(?i).*(chrome|firefox|brave|chromium).*"] inhibit_idle visible
-for_window [class="(?i).*(vlc|mpv).*"] inhibit_idle visible
-for_window [app_id="(?i).*(vlc|mpv).*"] inhibit_idle visible
-for_window [class="(?i).*(code|cursor|vscodium).*"] inhibit_idle visible
-for_window [app_id="(?i).*(code|cursor|vscodium).*"] inhibit_idle visible
+# Media
+for_window [class="(?i).*mpv.*"] inhibit_idle visible
+for_window [app_id="(?i).*mpv.*"] inhibit_idle visible
 
-for_window [app_id="albert"] focus
+# Code Editors
+for_window [class="(?i).*antigravity.*"] inhibit_idle visible
+for_window [app_id="(?i).*antigravity.*"] inhibit_idle visible

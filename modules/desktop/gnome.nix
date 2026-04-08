@@ -24,10 +24,10 @@ with lib; {
   services.greetd = {
     enable = true;
     settings = {
-      initial_session = {
-        command = "sway";
-        user = "felicia";
-      };
+      # initial_session = {
+      #   command = "sway";
+      #   user = "felicia";
+      # };
       default_session = {
         command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd sway";
         user = "greeter";

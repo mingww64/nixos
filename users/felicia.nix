@@ -7,17 +7,15 @@
 in {
   users.users.felicia = {
     isNormalUser = true;
-    extraGroups = ["wheel" "aria2" "dialout"]; # Enable ‘sudo’ for the user.
+    extraGroups = ["wheel" "aria2" "dialout" "corectrl"]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       inputs.high-tide-repo.packages.${system}.high-tide
       inputs.antigravity-nix.packages.${system}.google-antigravity-no-fhs
       gh
       amule
-      firefox
       moonlight-qt
       seahorse
       dconf-editor
-      code-cursor
       pavucontrol
       playerctl
       mpv
@@ -26,25 +24,32 @@ in {
       remmina
       tidal-hifi
       google-chrome
-      thunar
       xfce4-settings
       obs-studio
       qpwgraph
       easyeffects
-      valent
+      kdePackages.kdeconnect-kde
       lan-mouse
       gnome-tweaks
       nixd
       alejandra
-      nautilus
       nnn
+      xdg-terminal-exec
       jq
+      bottles
+      kdePackages.krdc
+      kdePackages.krdp
+      rquickshare
     ];
   };
 
   # services.displayManager.autoLogin.user = "felicia";
 
-  home-manager.users.felicia = {pkgs, config, ...}: {
+  home-manager.users.felicia = {
+    pkgs,
+    config,
+    ...
+  }: {
     home.stateVersion = "22.11";
 
     services.rescrobbled = {
@@ -57,6 +62,8 @@ in {
 
     xdg.configFile."sway".source = ../dotfiles/sway;
     xdg.configFile."waybar".source = ../dotfiles/waybar;
+    xdg.configFile."xdg-desktop-portal-termfilechooser".source = ../dotfiles/xdg-desktop-portal-termfilechooser;
+    xdg.configFile."xdg-terminals.list".source = ../dotfiles/xdg-terminals.list;
     xdg.configFile."Code/User/settings.json".source = ../dotfiles/vscode/settings.json;
     home.file.".vscode/extensions/base16-oomox-lcars".source = ../dotfiles/vscode/extensions/base16-oomox-lcars;
     xdg.configFile."Antigravity/User/settings.json".source = ../dotfiles/antigravity/settings.json;
@@ -165,6 +172,7 @@ in {
       nwg-look
       linux-wallpaperengine
       networkmanagerapplet
+      papirus-icon-theme
     ];
 
     home.shellAliases = {
@@ -174,6 +182,25 @@ in {
       enable = true;
       defaultApplications = {
         "inode/directory" = "nnn.desktop";
+        "text/plain" = "antigravity.desktop";
+        "text/html" = "google-chrome.desktop";
+        "x-scheme-handler/http" = "google-chrome.desktop";
+        "x-scheme-handler/https" = "google-chrome.desktop";
+        "x-scheme-handler/about" = "google-chrome.desktop";
+        "x-scheme-handler/unknown" = "google-chrome.desktop";
+        "application/pdf" = "google-chrome.desktop";
+        "video/mp4" = "mpv.desktop";
+        "video/x-matroska" = "mpv.desktop";
+        "video/webm" = "mpv.desktop";
+        "video/quicktime" = "mpv.desktop";
+        "audio/mpeg" = "mpv.desktop";
+        "audio/flac" = "mpv.desktop";
+        "audio/x-wav" = "mpv.desktop";
+        "audio/ogg" = "mpv.desktop";
+        "image/png" = "google-chrome.desktop";
+        "image/jpeg" = "google-chrome.desktop";
+        "image/gif" = "google-chrome.desktop";
+        "image/webp" = "google-chrome.desktop";
       };
     };
   };

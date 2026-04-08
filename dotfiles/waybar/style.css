@@ -150,4 +150,4 @@ window#waybar {
 #taskbar button image {
   margin: 0;
   padding: 0;
-}
+}#tray > widget { color: @base00; } #tray menu { color: @base05; }

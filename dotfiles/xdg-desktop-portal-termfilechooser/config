@@ -1,0 +1,3 @@
+[filechooser]
+cmd=/home/felicia/.config/xdg-desktop-portal-termfilechooser/nnn-wrapper.sh
+default_dir=/home/felicia/Downloads

@@ -14,11 +14,20 @@ with lib; {
     wlr.enable = true;
     extraPortals = mkDefault [
       pkgs.xdg-desktop-portal-gnome
+      pkgs.xdg-desktop-portal-termfilechooser
       (pkgs.xdg-desktop-portal-gtk.override {
         # Do not build portals that we already have.
         buildPortalsInGnome = false;
       })
     ];
+    config = {
+      common = {
+        default = [ "gtk" ];
+      };
+      sway = {
+        default = lib.mkForce [ "termfilechooser" "gtk" "wlr" ];
+      };
+    };
   };
 
   programs.sway = {
@@ -29,19 +38,7 @@ with lib; {
   security.rtkit.enable = true;
   security.polkit.enable = true;
 
-  systemd.user.services.polkit-gnome-authentication-agent-1 = {
-    description = "polkit-gnome-authentication-agent-1";
-    wantedBy = ["graphical-session.target"];
-    wants = ["graphical-session.target"];
-    after = ["graphical-session.target"];
-    serviceConfig = {
-      Type = "simple";
-      ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
-      Restart = "on-failure";
-      RestartSec = 1;
-      TimeoutStopSec = 10;
-    };
-  };
+  environment.systemPackages = [ pkgs.polkit_gnome ];
 
   security.polkit.extraConfig = ''
     polkit.addRule(function(action, subject) {

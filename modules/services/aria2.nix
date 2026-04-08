@@ -2,16 +2,16 @@
   config,
   ...
 }: let
-  getFormattedTrackerList = url:
+  getFormattedTrackerList = url: sha256:
     builtins.replaceStrings ["\n"] [","] (builtins.replaceStrings ["\n\n"] ["\n"]
       (
         builtins.readFile
         (builtins.fetchurl {
-          inherit url;
+          inherit url sha256;
         })
       ));
 
-  trackerList = getFormattedTrackerList "https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt";
+  trackerList = getFormattedTrackerList "https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt" "0kckb5qwmy8qp8fh8gbbfc0z679mvhxag9vl4n14hdgbjc56477v";
 in {
   services.aria2 = {
     enable = true;
