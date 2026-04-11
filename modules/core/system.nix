@@ -1,5 +1,6 @@
 {
   pkgs,
+  config,
   ...
 }: {
   boot.kernelModules = ["ufs"];
@@ -41,9 +42,13 @@
 
   environment.variables = {
     SUDO_ASKPASS = "${pkgs.lxqt.lxqt-openssh-askpass}/bin/lxqt-openssh-askpass";
-    GEMINI_API_KEY = "AIzaSyACqY53X54y9BsmdE1j667dEsv1KRzYi38";
-    GOOGLE_API_KEY = "AIzaSyACqY53X54y9BsmdE1j667dEsv1KRzYi38";
   };
+
+  environment.extraInit = ''
+    if [ -r "${config.sops.templates."gemini-vars".path}" ]; then
+      source ${config.sops.templates."gemini-vars".path}
+    fi
+  '';
 
   environment.shellAliases = {
     sysup = "sudo nixos-rebuild switch --flake /etc/nixos#desktop";

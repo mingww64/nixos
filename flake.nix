@@ -23,6 +23,10 @@
       url = "github:jacopone/antigravity-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {
@@ -30,6 +34,7 @@
     vscode-server,
     nur,
     home-manager,
+    sops-nix,
     ...
   }: let
     system = "x86_64-linux";
@@ -42,6 +47,7 @@
         nur.modules.nixos.default
         vscode-server.nixosModules.default
         home-manager.nixosModules.home-manager
+        sops-nix.nixosModules.sops
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;

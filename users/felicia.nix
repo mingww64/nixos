@@ -7,7 +7,7 @@
 in {
   users.users.felicia = {
     isNormalUser = true;
-    extraGroups = ["wheel" "aria2" "dialout" "corectrl"]; # Enable ‘sudo’ for the user.
+    extraGroups = ["wheel" "aria2" "dialout" "corectrl" "keys"]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       inputs.high-tide-repo.packages.${system}.high-tide
       inputs.antigravity-nix.packages.${system}.google-antigravity-no-fhs
@@ -54,10 +54,6 @@ in {
 
     services.rescrobbled = {
       enable = true;
-      settings = {
-        lastfm-key = "2ef331a96c0f0fa8367bfdd5c53b23cb";
-        lastfm-secret = "77370bc219ed9c74404f0e293bbeda07";
-      };
     };
 
     xdg.configFile."sway".source = ../dotfiles/sway;

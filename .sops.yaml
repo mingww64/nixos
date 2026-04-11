@@ -1,0 +1,6 @@
+creation_rules:
+  - path_regex: secrets\.yaml$
+    key_groups:
+      - age:
+          - age1kgwq8r4ajtgqd05katkgyvlgqjrwa8x9suuwp44znvtw4xx0cpvqx4327u # user: felicia
+          - age1vgzwpmvjtfn6vca8sj7tje0a5p3j5cmckrq6upz7x3n85wxl4ulqjam3xy # host: desktop

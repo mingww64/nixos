@@ -12,6 +12,7 @@
     ./modules/core/system.nix
     ./modules/core/packages.nix
     ./modules/core/power.nix
+    ./modules/core/sops.nix
 
     # Desktop Environments
     ./modules/desktop/de.nix

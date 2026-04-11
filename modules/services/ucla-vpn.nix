@@ -4,7 +4,7 @@
     openconnect0 = {
     autoStart = false;
     gateway = "ssl.vpn.ucla.edu";
-    passwordFile = "/etc/nixos/ucla_passwd";
+    passwordFile = config.sops.secrets.ucla_passwd.path;
     protocol = "anyconnect";
     user = "mingww64@ucla.edu";
     extraOptions = { useragent = "AnyConnect"; };
